@@ -35,7 +35,6 @@
         android:layoutDirection="ltr"
         android:background="@color/background_dialpad" >
 
-
         <!-- Text field and possibly soft menu button above the keypad where
              the digits are displayed. -->
         <LinearLayout
