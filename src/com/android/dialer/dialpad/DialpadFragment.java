@@ -440,7 +440,7 @@ public class DialpadFragment extends Fragment
         mDigits.setOnLongClickListener(this);
         mDigits.addTextChangedListener(this);
         PhoneNumberFormatter.setPhoneNumberFormattingTextWatcher(getActivity(), mDigits);
-        setupKeypad(fragmentView);
+        setupKeypad(mFragmentView);
 
         mDelete = mFragmentView.findViewById(R.id.deleteButton);
         if (mDelete != null) {
@@ -630,9 +630,9 @@ public class DialpadFragment extends Fragment
         }
     }
 
-    private void setupKeypad(View fragmentView) {
+    private void setupKeypad(View mFragmentView) {
         // make sure keypad is there
-        View oneButton = fragmentView.findViewById(R.id.one);
+        View oneButton = mFragmentView.findViewById(R.id.one);
         if (oneButton == null)
             return;
 
@@ -673,7 +673,7 @@ public class DialpadFragment extends Fragment
         TextView letters2View;
 
         for (int i = 0; i < buttonIds.length; i++) {
-            dialpadKey = (DialpadKeyButton) fragmentView.findViewById(buttonIds[i]);
+            dialpadKey = (DialpadKeyButton) mFragmentView.findViewById(buttonIds[i]);
             dialpadKey.setLayoutParams(new TableRow.LayoutParams(
                     TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.MATCH_PARENT));
             dialpadKey.setPadding(0, padding, 0, padding);
@@ -697,17 +697,17 @@ public class DialpadFragment extends Fragment
         }
 
         // Long-pressing one button will initiate Voicemail.
-        fragmentView.findViewById(R.id.one).setOnLongClickListener(this);
+        mFragmentView.findViewById(R.id.one).setOnLongClickListener(this);
 
         // Long-pressing zero button will enter '+' instead.
-        fragmentView.findViewById(R.id.zero).setOnLongClickListener(this);
+        mFragmentView.findViewById(R.id.zero).setOnLongClickListener(this);
 
     }
 
     public void refreshKeypad() {
-        View fragmentView = getView();
-        if (fragmentView != null)
-            setupKeypad(fragmentView);
+        View mFragmentView = getView();
+        if (mFragmentView != null)
+            setupKeypad(mFragmentView);
     }
 
     @Override
