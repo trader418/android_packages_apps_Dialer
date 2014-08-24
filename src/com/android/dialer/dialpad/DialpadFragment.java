@@ -89,6 +89,7 @@ import com.android.dialer.database.DialerDatabaseHelper;
 import com.android.dialer.interactions.PhoneNumberInteraction;
 import com.android.dialer.util.MultiSensorManager;
 import com.android.dialer.util.OrientationUtil;
+import com.android.dialer.cmstats.DialerStats;
 import com.android.internal.telephony.ITelephony;
 import com.android.phone.common.CallLogAsync;
 import com.android.phone.common.HapticFeedback;
@@ -1227,6 +1228,8 @@ public class DialpadFragment extends Fragment
         if (isDigitsEmpty()) { // No number entered.
             handleDialButtonClickWithEmptyDigits();
         } else {
+            DialerStats.sendEvent(getActivity(), DialerStats.Categories.INITIATE_CALL, "call_from_dialpad_direct");
+
             final String number = mDigits.getText().toString();
 
             // "persist.radio.otaspdial" is a temporary hack needed for one carrier's automated
