@@ -117,7 +117,6 @@ public class DialpadFragment extends Fragment
         PopupMenu.OnMenuItemClickListener, MultiSensorManager.MultiSensorListener,
         DialpadKeyButton.OnPressedListener {
     private static final String TAG = DialpadFragment.class.getSimpleName();
-    private Context mContext;
 
     private Context mContext;
 
@@ -658,9 +657,9 @@ public class DialpadFragment extends Fragment
         }
     }
 
-    private void setupKeypad(View mFragmentView) {
+    private void setupKeypad(View fragmentView) {
         // make sure keypad is there
-        View oneButton = mFragmentView.findViewById(R.id.one);
+        View oneButton = fragmentView.findViewById(R.id.one);
         if (oneButton == null)
             return;
 
@@ -701,7 +700,7 @@ public class DialpadFragment extends Fragment
         TextView letters2View;
 
         for (int i = 0; i < buttonIds.length; i++) {
-            dialpadKey = (DialpadKeyButton) mFragmentView.findViewById(buttonIds[i]);
+            dialpadKey = (DialpadKeyButton) fragmentView.findViewById(buttonIds[i]);
             dialpadKey.setLayoutParams(new TableRow.LayoutParams(
                     TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.MATCH_PARENT));
             dialpadKey.setPadding(0, padding, 0, padding);
@@ -729,10 +728,10 @@ public class DialpadFragment extends Fragment
         }
 
         // Long-pressing one button will initiate Voicemail.
-        mFragmentView.findViewById(R.id.one).setOnLongClickListener(this);
+        fragmentView.findViewById(R.id.one).setOnLongClickListener(this);
 
         // Long-pressing zero button will enter '+' instead.
-        mFragmentView.findViewById(R.id.zero).setOnLongClickListener(this);
+        fragmentView.findViewById(R.id.zero).setOnLongClickListener(this);
 
         // Long-pressing star button will enter ','(pause) instead.
         fragmentView.findViewById(R.id.star).setOnLongClickListener(this);
