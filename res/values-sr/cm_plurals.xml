@@ -17,23 +17,27 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <plurals name="hour">
-    <item quantity="one">1 hodina</item>
-    <item quantity="few">%d hodiny</item>
-    <item quantity="other">%d hodin</item>
+    <item quantity="one">1 сат</item>
+    <item quantity="few">%d сата</item>
+    <item quantity="many">%d сата</item>
+    <item quantity="other">%d сата</item>
   </plurals>
   <plurals name="minute">
-    <item quantity="one">1 minuta</item>
-    <item quantity="few">%d minuty</item>
-    <item quantity="other">%d minut</item>
+    <item quantity="one">1 мин</item>
+    <item quantity="few">%d минута</item>
+    <item quantity="many">%d минута</item>
+    <item quantity="other">%d минута</item>
   </plurals>
   <plurals name="second">
-    <item quantity="one">1 sekunda</item>
-    <item quantity="few">%d sekundy</item>
-    <item quantity="other">%d sekund</item>
+    <item quantity="one">1 сек</item>
+    <item quantity="few">%d секунде</item>
+    <item quantity="many">%d секунде</item>
+    <item quantity="other">%d секунде</item>
   </plurals>
   <plurals name="call">
-    <item quantity="one">1 hovor</item>
-    <item quantity="few">%d hovory</item>
-    <item quantity="other">%d hovorů</item>
+    <item quantity="one">1 позив</item>
+    <item quantity="few">%d позива</item>
+    <item quantity="many">%d позива</item>
+    <item quantity="other">%d позива</item>
   </plurals>
 </resources>

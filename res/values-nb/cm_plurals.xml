@@ -17,23 +17,19 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <plurals name="hour">
-    <item quantity="one">1 hodina</item>
-    <item quantity="few">%d hodiny</item>
-    <item quantity="other">%d hodin</item>
+    <item quantity="one">1 time</item>
+    <item quantity="other">%d timer</item>
   </plurals>
   <plurals name="minute">
-    <item quantity="one">1 minuta</item>
-    <item quantity="few">%d minuty</item>
-    <item quantity="other">%d minut</item>
+    <item quantity="one">1 min</item>
+    <item quantity="other">%d minutter</item>
   </plurals>
   <plurals name="second">
-    <item quantity="one">1 sekunda</item>
-    <item quantity="few">%d sekundy</item>
-    <item quantity="other">%d sekund</item>
+    <item quantity="one">1 sek</item>
+    <item quantity="other">%d sekunder</item>
   </plurals>
   <plurals name="call">
-    <item quantity="one">1 hovor</item>
-    <item quantity="few">%d hovory</item>
-    <item quantity="other">%d hovorů</item>
+    <item quantity="one">1 samtale</item>
+    <item quantity="other">%d samtaler</item>
   </plurals>
 </resources>
