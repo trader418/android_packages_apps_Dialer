@@ -23,6 +23,7 @@ import com.android.dialer.lookup.opencnam.OpenCnamReverseLookup;
 import com.android.dialer.lookup.whitepages.WhitePagesReverseLookup;
 import com.android.dialer.lookup.yellowpages.YellowPagesReverseLookup;
 import com.android.dialer.lookup.zabasearch.ZabaSearchReverseLookup;
+import com.android.dialer.lookup.herold.HeroldReverseLookup;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -56,6 +57,8 @@ public abstract class ReverseLookup {
                 INSTANCE = new CyngnChineseReverseLookup(context);
             } else if (provider.equals(LookupSettings.RLP_DASTELEFONBUCH)) {
                 INSTANCE = new TelefonbuchReverseLookup(context);
+            } else if (provider.equals(LookupSettings.RLP_HEROLD)) {
+                INSTANCE = new HeroldReverseLookup(context);
             }
         }
 
@@ -82,6 +85,9 @@ public abstract class ReverseLookup {
             return true;
         } else if (provider.equals(LookupSettings.RLP_DASTELEFONBUCH)
                 && INSTANCE instanceof TelefonbuchReverseLookup) {
+            return true;
+        } else if (provider.equals(LookupSettings.RLP_HEROLD)
+                && INSTANCE instanceof HeroldReverseLookup) {
             return true;
         } else {
             return false;
