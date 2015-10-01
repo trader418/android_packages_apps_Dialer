@@ -56,6 +56,7 @@ public class GeneralSettingsFragment extends PreferenceFragment
     private static final String BUTTON_T9_SEARCH_INPUT_LOCALE = "button_t9_search_input";
     public static final String BUTTON_SMART_DIALER_KEY = "button_smart_dialer";
     public static final String BUTTON_SMART_MUTE_KEY = "button_smart_mute";
+    private static final String USE_NON_INTRUSIVE_CALL_KEY = "use_non_intrusive_call";
 
     private static final int MSG_UPDATE_RINGTONE_SUMMARY = 1;
 
@@ -67,6 +68,7 @@ public class GeneralSettingsFragment extends PreferenceFragment
     private Preference mRespondViaSms;
     private Preference mSpeedDialSettings;
     private ListPreference mT9SearchInputLocale;
+    private SwitchPreference mUseNonIntrusiveCall;
 
     // t9 search input locales that we have a custom overlay for
     private static final Locale[] T9_SEARCH_INPUT_LOCALES = new Locale[] {
@@ -104,6 +106,11 @@ public class GeneralSettingsFragment extends PreferenceFragment
         PreferenceCategory soundCategory = (PreferenceCategory) findPreference(CATEGORY_SOUNDS_KEY);
         Vibrator vibrator = (Vibrator) mContext.getSystemService(Context.VIBRATOR_SERVICE);
         boolean hasVibrator = vibrator != null && vibrator.hasVibrator();
+
+        mUseNonIntrusiveCall = (SwitchPreference) findPreference(USE_NON_INTRUSIVE_CALL_KEY);
+        if (mUseNonIntrusiveCall != null) {
+            mUseNonIntrusiveCall.setOnPreferenceChangeListener(this);
+        }
 
         if (mVibrateWhenRinging != null) {
             if (hasVibrator) {
@@ -157,6 +164,10 @@ public class GeneralSettingsFragment extends PreferenceFragment
                     Settings.System.VIBRATE_WHEN_RINGING, doVibrate ? 1 : 0);
         } else if (preference == mT9SearchInputLocale) {
             saveT9SearchInputLocale(preference, (String) objValue);
+        } else if (preference == mUseNonIntrusiveCall) {
+            final boolean val = (Boolean) objValue;
+            Settings.System.putInt(mContext.getContentResolver(),
+                    Settings.System.USE_NON_INTRUSIVE_CALL, val ? 1 : 0);
         }
         return true;
     }
@@ -182,6 +193,11 @@ public class GeneralSettingsFragment extends PreferenceFragment
 
         if (mVibrateWhenRinging != null) {
             mVibrateWhenRinging.setChecked(SettingsUtil.getVibrateWhenRingingSetting(mContext));
+        }
+
+        if (mUseNonIntrusiveCall != null) {
+            mUseNonIntrusiveCall.setChecked(Settings.System.getInt(mContext.getContentResolver(),
+                Settings.System.USE_NON_INTRUSIVE_CALL, 1) != 0);
         }
 
         // Lookup the ringtone name asynchronously.
