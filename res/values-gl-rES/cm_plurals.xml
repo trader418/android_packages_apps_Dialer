@@ -17,8 +17,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <plurals name="hour">
-    <item quantity="one">1 hr</item>
-    <item quantity="other">%d hrs</item>
+    <item quantity="one">1 h</item>
+    <item quantity="other">%d horas</item>
   </plurals>
   <plurals name="minute">
     <item quantity="one">1 min</item>
@@ -26,10 +26,10 @@
   </plurals>
   <plurals name="second">
     <item quantity="one">1 seg</item>
-    <item quantity="other">%d segs</item>
+    <item quantity="other">%d seg</item>
   </plurals>
   <plurals name="call">
-    <item quantity="one">1 llamada</item>
-    <item quantity="other">%d llamadas</item>
+    <item quantity="one">1 chamada</item>
+    <item quantity="other">%d chamadas</item>
   </plurals>
 </resources>

@@ -25,9 +25,9 @@
   <string name="enable_people_lookup_title">Búsqueda de personas</string>
   <string name="enable_people_lookup_summary">Mostrar resultados en línea para las personas al buscar en el marcador</string>
   <string name="enable_reverse_lookup_title">Búsqueda inversa</string>
-  <string name="enable_reverse_lookup_summary">Buscar información sobre la persona o lugar para llamadas de números desconocidos</string>
+  <string name="enable_reverse_lookup_summary">Buscar información sobre la persona o lugar para llamadas de números desconocidos en llamadas entrantes</string>
   <string name="forward_lookup_provider_title">Proveedor de búsqueda</string>
-  <string name="people_lookup_provider_title">Proveedor de busqueda para personas</string>
+  <string name="people_lookup_provider_title">Proveedor de búsqueda de personas</string>
   <string name="reverse_lookup_provider_title">Proveedor de búsqueda inversa</string>
   <string name="cyngn_reverse_lookup_provider_name">Cyngn Chino (CN)</string>
   <string name="preference_category_t9_dialpad_search">Búsqueda en teclado T9</string>
@@ -36,7 +36,7 @@
   <string name="type_blacklist">Llamada bloqueada</string>
   <string name="call_log_stats_title">Estadísticas</string>
   <string name="callStatsDetailTitle">Detalles de llamada</string>
-  <string name="call_stats">Estadísticas de llamadas</string>
+  <string name="call_stats">Estadísticas de llamada</string>
   <string name="call_stats_refresh">Actualizar</string>
   <string name="activity_title_call_stats">Estadísticas de llamadas</string>
   <string name="call_stats_nav_all">Todas</string>
@@ -51,8 +51,8 @@
   <string name="call_stats_blacklist_percent">Bloqueadas: <xliff:g id="percent">%d</xliff:g>%%</string>
   <string name="call_stats_header_total">Total: <xliff:g id="call_count">%s</xliff:g>, <xliff:g id="duration">%s</xliff:g></string>
   <string name="call_stats_header_total_callsonly">Total: <xliff:g id="call_count">%s</xliff:g></string>
-  <string name="call_stats_filter_from">Fecha inicio</string>
-  <string name="call_stats_filter_to">Fecha fin</string>
+  <string name="call_stats_filter_from">Fecha de inicio</string>
+  <string name="call_stats_filter_to">Fecha de fin</string>
   <string name="call_stats_filter_picker_title">Rango de fechas</string>
   <string name="date_quick_selection">Selección rápida</string>
   <string name="date_qs_currentmonth">Mes actual</string>
@@ -68,12 +68,12 @@
   <string name="call_stats_sort_by_count">Ordenar por núm. llamadas</string>
   <string name="menu_add_to_blacklist">Añadir a la lista de contactos bloqueados</string>
   <string name="toast_added_to_blacklist">%s añadidos a la lista de contactos bloqueados.</string>
-  <string name="speed_dial_settings">Ajustes de marcado</string>
+  <string name="speed_dial_settings">Ajustes de marcado rápido</string>
   <string name="speed_dial_not_set">(sin establecer)</string>
   <string name="speed_dial_replace">Reemplazar</string>
   <string name="speed_dial_delete">Eliminar</string>
   <string name="speed_dial_unassigned_dialog_title">Tecla sin asignar</string>
-  <string name="speed_dial_unassigned_dialog_message">Ninguna acción rápida asignada al número \u00AB<xliff:g id="number">%s</xliff:g>\u00BB. ¿Quieres asignar una acción ahora?</string>
+  <string name="speed_dial_unassigned_dialog_message">Ninguna acción rápida asignada al número \'<xliff:g id="number">%s</xliff:g>\'. ¿Quieres asignar una acción ahora?</string>
   <string name="dialog_speed_dial_airplane_mode_message">Para usar la marcación rápida, primero desactiva el modo avión.</string>
   <string name="yes">Sí</string>
   <string name="no">No</string>
