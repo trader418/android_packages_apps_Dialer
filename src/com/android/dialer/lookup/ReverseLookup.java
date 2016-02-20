@@ -17,6 +17,7 @@
 package com.android.dialer.lookup;
 
 import com.android.dialer.calllog.ContactInfo;
+import com.android.dialer.lookup.auskunft.AuskunftReverseLookup;
 import com.android.dialer.lookup.cyngn.CyngnChineseReverseLookup;
 import com.android.dialer.lookup.dastelefonbuch.TelefonbuchReverseLookup;
 import com.android.dialer.lookup.gebeld.GebeldReverseLookup;
@@ -62,6 +63,8 @@ public abstract class ReverseLookup {
                 INSTANCE = new GebeldReverseLookup(context);
             } else if (provider.equals(LookupSettings.RLP_HEROLD)) {
                 INSTANCE = new HeroldReverseLookup(context);
+            } else if (provider.equals(LookupSettings.RLP_AUSKUNFT)) {
+                INSTANCE = new AuskunftReverseLookup(context);
             }
         }
 
@@ -94,10 +97,12 @@ public abstract class ReverseLookup {
             return true;
         } else if (provider.equals(LookupSettings.RLP_HEROLD)
                 && INSTANCE instanceof HeroldReverseLookup) {
+        } else if (provider.equals(LookupSettings.RLP_AUSKUNFT)
+                && INSTANCE instanceof AuskunftReverseLookup) {
             return true;
-        } else {
-            return false;
         }
+
+        return false;
     }
 
     /**

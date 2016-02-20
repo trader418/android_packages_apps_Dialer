@@ -58,6 +58,8 @@
   <string name="date_qs_currentyear">السنة الحالية</string>
   <string name="date_qs_lastweek">الأسبوع الماضي</string>
   <string name="date_qs_lastmonth">الشهر الماضي</string>
+  <string name="date_qs_lastquarter">الربع الأخير</string>
+  <string name="date_qs_lastyear">العام الماضي</string>
   <string name="call_stats_date_filter">ضبط النطاق الزمني</string>
   <string name="call_stats_reset_filter">إعادة تعيين النطاق الزمني</string>
   <string name="call_stats_sort_by_duration">فرز بحسب مدة المكالمة</string>
