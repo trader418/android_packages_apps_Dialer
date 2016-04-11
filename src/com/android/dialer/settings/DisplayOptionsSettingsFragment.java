@@ -66,7 +66,11 @@ public class DisplayOptionsSettingsFragment extends PreferenceFragment
     @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         if (preference == mT9SearchInputLocale) {
-            saveT9SearchInputLocale(preference, (String) objValue);
+            try {
+                saveT9SearchInputLocale(preference, (String) objValue);
+            } catch(IllegalArgumentException e) {
+                // Do nothing
+            }
         }
         return true;
     }
